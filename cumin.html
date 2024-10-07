@@ -90,6 +90,7 @@
     <link rel='stylesheet' id='twentyfifteen-style-css'
         href='https://digitalworldafg.com/wp-content/themes/Digitalworld/style.css?ver=5.8.10' type='text/css'
         media='all' />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!--[if lt IE 9]>
 <link rel='stylesheet' id='twentyfifteen-ie-css'  href='https://digitalworldafg.com/wp-content/themes/Digitalworld/css/ie.css?ver=20141010' type='text/css' media='all' />
 <![endif]-->
@@ -127,7 +128,7 @@
             /* Maintain aspect ratio while covering the container */
         }
 
-        #colorbg{
+        #colorbg {
             background-color: rgb(0, 0, 0);
             border: 1px solid white;
             border-radius: 6px;
@@ -287,6 +288,11 @@
             transform: translateX(100%);
         }
 
+
+        #navo {
+            background-color: white;
+        }
+
         div#n2-ss-2 .nextend-arrow-animated-vertical>div {
             transition: all 0.4s;
             transform: none;
@@ -314,11 +320,16 @@
             transform: translateY(100%);
         }
 
-        #head{
+        #specialimg {
+            height: 62vh;
+            width: 70vw;
+        }
+
+        #head {
             background-color: orange;
         }
 
-        #lisbg{
+        #lisbg {
             background-color: orange;
         }
 
@@ -329,6 +340,63 @@
         .margin {
             margin-top: 10rem;
         }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f8de;
+        }
+
+        .feature-section {
+            padding: 5rem 0;
+            margin-top: 14rem;
+        }
+
+        .image-wrapper {
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-wrapper:hover {
+            transform: scale(1.05);
+        }
+
+        .text-content {
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .lead {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 991px) {
+            .text-content {
+                margin-top: 2rem;
+            }
+        }
+
+
 
         div#n2-ss-2 .nextend-arrow img {
             width: 32px
@@ -357,7 +425,8 @@
                 width: 16px
             }
         }
-        .copy-ri{
+
+        .copy-ri {
             background-color: orange;
         }
 
@@ -366,6 +435,7 @@
             /* مکمل سیاہ پس منظر */
             background: url('https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-backdrop_53876-129485.jpg');
             color: white;
+            margin-top: 14rem;
             /* سفید رنگ کی تحریر */
         }
 
@@ -389,7 +459,6 @@
             color: white;
             /* جگہ دار تحریر کا رنگ سفید */
         }
-
     </style>
     <script type='text/javascript' src='https://digitalworldafg.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0'
         defer ' id=' jquery-core-js'></script>
@@ -398,10 +467,8 @@
         jquery-migrate-js'></script>
 </head>
 
-
 <body>
 
-    <div id="google_translate_element"></div>
     <header id="head">
         <div id="head" class="header-top">
             <div id="head" class="container">
@@ -428,16 +495,15 @@
     </header>
 
 
-    <nav>
+    <nav id="navo">
         <div class="container">
             <div class="relanav">
                 <div class="logoarea">
 
                     <div class="logo">
 
-                        <a href="http://digitalworldafg.com/"><img width="229" height="155"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThIZnDS3RuqeBNAdfqCNpvCuaLs-TXKCNMpw&s"
-                                alt="Your Logo Will Here" /></a>
+                        <a href="http://digitalworldafg.com/"><img width="170" height="155"
+                                src="/Screenshot 2024-10-07 202806.png" alt="Your Logo Will Here" /></a>
 
                     </div>
 
@@ -455,13 +521,21 @@
                         <li id="menu-item-24"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a
                                 href="/about.html">About Us</a></li>
-                        
-                        <li id="menu-item-51"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-51"><a
-                                href="/product.html">Products</a></li>
+
                         <li id="menu-item-20"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a
                                 href="/contact.html">Contact Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown link
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -469,398 +543,31 @@
         </div>
     </nav>
 
-    <div class="banner"
-        style=" background:url('https://images.pexels.com/photos/235294/pexels-photo-235294.jpeg?cs=srgb&dl=pexels-wdnet-235294.jpg&fm=jpg');background-position: center center; background-repeat:no-repeat; background-size:cover;">
-
-        <div class="">
-            <div class="">
-                <div id=""></div>
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-    <div class="container margin">
-
-        <div class="workupper">
-
-            <ul>
-                <li >
-                    <img width="76" height="76" src="https://digitalworldafg.com/wp-content/uploads/2018/10/icon-1.png"
-                        alt="" />
-                    <h3>Freshness</h3> <!-- For first icon, related to dry fruits -->
-                </li>
-
-                <li id="lisbg">
-                    <img width="77" height="76" src="https://digitalworldafg.com/wp-content/uploads/2018/10/icon-2.png"
-                        alt="" />
-                    <h3>Assurance</h3> <!-- Second one remains Assurance -->
-                </li>
-
-                <li>
-                    <img width="77" height="76" src="https://digitalworldafg.com/wp-content/uploads/2018/10/icon-3.png"
-                        alt="" />
-                    <h3>Quality</h3> <!-- Third one remains Quality -->
-                </li>
-            </ul>
-
-        </div>
-
-    </div>
-
-
-    <section class="welcomeDWA">
-
+    <section class="feature-section">
         <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                    <img class="fullimage" src="https://naturalmaza.com/wp-content/uploads/2024/05/Almond-Kernels.jpg"
-                        width="626" height="465" alt="Welcome to DWA" />
-
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                    <div class="welright">
-                        <br />
-                        <h2 class="heading">Almonds</h2>
-                        <p>Afghan almonds are prized for their exceptional taste and high quality. Grown in the fertile
-                            regions of Afghanistan, these almonds are sweet, crunchy, and rich in nutrients. They are a
-                            source of healthy fats, proteins, and antioxidants, promoting heart health and brain
-                            function. Afghan almonds are often used in traditional dishes, snacks, and desserts,
-                            symbolizing Afghan culinary excellence.</p>
-
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="image-wrapper">
+                        <img id="specialimg"
+                            src="https://cdn.britannica.com/59/219359-050-662D86EA/Cumin-Spice.jpg"
+                            class="img-fluid rounded shadow-lg">
                     </div>
-
                 </div>
-
-
-
-            </div>
-            <div class="row rotate">
-
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                    <img class="fullimage"
-                        src="https://d1l8km4g5s76x5.cloudfront.net/Production/exb_doc/2008/11371/2008_11371_11250_2548.png/fit-in/500x500"
-                        width="526" height="465" alt="Pistachios" />
-
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                    <div class="welright">
-                        <br />
-                        <h2 class="heading">Pistachios</h2>
-                        <p>Afghan pistachios are renowned for their superior taste and high quality. Grown in the unique
-                            arid climate of Afghanistan, these nuts develop a rich, slightly sweet flavor and a
-                            delightful crunch. Packed with protein, fiber, and essential vitamins and minerals, Afghan
-                            pistachios offer numerous health benefits, including improved heart health and digestive
-                            function. They are a popular ingredient in traditional Afghan sweets, such as desserts and
-                            pastries, and also feature in savory dishes. Due to their exceptional taste and texture,
-                            Afghan pistachios are highly sought after in international markets, making them a prized
-                            export and a staple in many culinary creations.
+                <div class="col-lg-7">
+                    <div class="text-content">
+                        <h2 class="mb-4">Cumin</h2>
+                        <p class="lead">
+                            Cumin is a popular spice known for its warm, earthy flavor and distinctive aroma. Rich in antioxidants and essential oils, it offers various health benefits, including aiding digestion, enhancing immunity, and providing anti-inflammatory properties. Commonly used in cuisines worldwide, cumin is a key ingredient in dishes like curries, stews, and spice blends, adding depth and richness to meals.
 
                         </p>
-
+                        <a href="/contact.html" class="btn btn-primary mt-3">Contact Now..</a>
                     </div>
-
                 </div>
-
-
-
             </div>
         </div>
-
-    </section>
-
-    <!-- <section class="services">
-
-        <div class="container">
-
-            <div class="text-center">
-
-                <h2 class="heading text-uppercase">Lorem Ipsum</h2>
-
-            </div>
-
-            <div class="normalpara text-center">
-
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repudiandae optio hic voluptates vel quod voluptatum. Ea fugiat error corrupti nemo eius dicta voluptatibus aliquid totam, odio quas quod ipsam rerum exercitationem assumenda excepturi quis impedit, obcaecati accusantium voluptate hic.</p>
-            </div>
-
-            <div class="servlower">
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                        <div class="leftpart">
-
-                            <div class="iconpart">
-
-                                <img width="97" height="255"
-                                    src="http://digitalworldafg.com/wp-content/uploads/2018/10/serv-1.png" alt="" />
-
-                            </div>
-
-                            <div class="textpart">
-                                <h4>Lorem Ipsum</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum deleniti sit, eaque reiciendis sed laboriosam totam. Modi earum dolore itaque libero aut numquam tempore deleniti.</p>
-                            </div>
-                        </div>
-
-                        <div class="leftpart">
-
-                            <div class="iconpart">
-
-                                <img width="97" height="255"
-                                    src="http://digitalworldafg.com/wp-content/uploads/2018/10/serv-2.png" alt="" />
-
-                            </div>
-
-                            <div class="textpart">
-                                <h4>Lorem Ipsum</h4>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni harum laboriosam ipsum itaque vero iste, nesciunt laudantium nulla neque deleniti minima illum nisi libero.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                        <div class="lady">
-                            <img width="285" height="546"
-                                src="" alt="Your Image" />
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                        <div class="leftpart">
-
-                            <div class="iconpart">
-
-                                <img width="97" height="255"
-                                    src="http://digitalworldafg.com/wp-content/uploads/2018/10/serv-3.png" alt="" />
-
-                            </div>
-
-                            <div class="textpart">
-                                <h4>lorem Ipsum</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, et deserunt maxime quae, possimus in veritatis enim doloribus quos dolore laudantium. Soluta, voluptas itaque.</p>
-                            </div>
-                        </div>
-
-                        <div class="leftpart">
-
-                            <div class="iconpart">
-
-                                <img width="97" height="255"
-                                    src="http://digitalworldafg.com/wp-content/uploads/2018/10/serv-4.png" alt="" />
-
-                            </div>
-
-                            <div class="textpart">
-                                <h4>Lorem Ipsum</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatibus neque, tempora ipsum itaque facilis possimus voluptas ipsam! Deserunt assumenda atque et fugit sunt?</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-        </div>
-
-
-    </section> -->
-
-
-
-    <section class="project pro">
-
-        <div class="container">
-
-            <div class="text-center">
-
-                <h2 class="white-heading">Products</h2>
-
-            </div>
-
-            <div class="owl-carousel proj owl-theme">
-
-
-
-                <div class="item">
-
-                    <div class="proj-slide text-center">
-
-                        <h4>Afghanistan Almonds</h4>
-
-                    </div>
-
-                </div>
-
-
-
-
-                <div class="item">
-
-                    <div class="proj-slide text-center">
-
-                        <h4>Afghan Pistachios</h4>
-
-                    </div>
-
-                </div>
-
-
-
-
-
-
-                <div class="item">
-
-                    <div class="proj-slide text-center">
-
-                        <h4>Afghan Raisins</h4>
-
-                    </div>
-
-                </div>
-
-
-
-
-                <div class="item">
-
-                    <div class="proj-slide text-center">
-
-                        <h4>Afghanistan Figs</h4>
-
-                    </div>
-
-                </div>
-
-
-
-
-            </div>
-
-            <div class="text-center">
-
-                <a class="know-btn" href="/products.html">Know More</a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- <section class="product">
-
-        <div class="container">
-
-            <h2 class="heading text-uppercase">product</h2>
-
-            <div class="produ-list">
-                <ul>
-                    <li
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-25">
-                        <a href="http://digitalworldafg.com/" aria-current="page">Home</a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a
-                            href="http://digitalworldafg.com/about-us/">About Us</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a
-                            href="http://digitalworldafg.com/services/">Services</a></li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-51"><a
-                            href="http://digitalworldafg.com/category/product/">Products</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a
-                            href="http://digitalworldafg.com/projects/">Projects</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a
-                            href="http://digitalworldafg.com/contact-us/">Contact Us</a></li>
-                </ul>
-            </div>
-
-
-        </div>
-
-    </section>
-
-    <section class="textimoni">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-
-                    <div class="tes-left">
-
-                        <h2 class="heading text-uppercase">testimonials</h2>
-
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-                        <div class="owl-carousel slidtesti owl-theme">
-
-
-
-                            <div class="item">
-
-                                <div class="boxtestimo clerfix text-center">
-
-                                    <div class="commapic text-center">
-                                        <img width="33" height="29"
-                                            src="http://digitalworldafg.com/wp-content/themes/Digitalworld/images/comma.png"
-                                            alt="" />
-                                    </div>
-
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est atque iusto
-                                        cupiditate officia exercitationem provident nostrum, deserunt sit eaque minus,
-                                        sed consequatur cumque ipsam quisquam consequuntur nam, quod possimus. Ipsa!</p>
-
-                                    <strong>customer</strong>
-                                </div>
-
-                            </div>
-
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-
-
-
-                </div>
-
-
-
-            </div>
-
-
-
     </section>
 
 
-
-
-
- -->
 
 
     <footer>
@@ -887,8 +594,8 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group"> <span
-                                                    class="wpcf7-form-control-wrap FirstName"><input id="colorbg" type="text"
-                                                        name="FirstName" value="" size="40"
+                                                    class="wpcf7-form-control-wrap FirstName"><input id="colorbg"
+                                                        type="text" name="FirstName" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="First Name" /></span> </div>
@@ -896,8 +603,8 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group"> <span
-                                                    class="wpcf7-form-control-wrap LastName"><input id="colorbg" type="text"
-                                                        name="LastName" value="" size="40"
+                                                    class="wpcf7-form-control-wrap LastName"><input id="colorbg"
+                                                        type="text" name="LastName" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="Last Name" /></span> </div>
@@ -905,16 +612,16 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group"> <span
-                                                    class="wpcf7-form-control-wrap CompanyName"><input id="colorbg" type="text"
-                                                        name="CompanyName" value="" size="40"
+                                                    class="wpcf7-form-control-wrap CompanyName"><input id="colorbg"
+                                                        type="text" name="CompanyName" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text form-control"
                                                         aria-invalid="false" placeholder="Company Name" /></span> </div>
                                             </p>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group"> <span
-                                                    class="wpcf7-form-control-wrap PhoneNumber"><input id="colorbg" type="tel"
-                                                        name="PhoneNumber" value="" size="40"
+                                                    class="wpcf7-form-control-wrap PhoneNumber"><input id="colorbg"
+                                                        type="tel" name="PhoneNumber" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="Phone Number" /></span> </div>
@@ -922,7 +629,7 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group"> <span class="wpcf7-form-control-wrap Email"><input
-                                                id="colorbg"  type="email" name="Email" value="" size="40"
+                                                        id="colorbg" type="email" name="Email" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="Email" /></span> </div>
@@ -930,8 +637,8 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group"> <span
-                                                    class="wpcf7-form-control-wrap message"><textarea id="colorbg" name="message"
-                                                        cols="3" rows="3"
+                                                    class="wpcf7-form-control-wrap message"><textarea id="colorbg"
+                                                        name="message" cols="3" rows="3"
                                                         class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="Message"></textarea></span> </div>
@@ -1030,8 +737,10 @@
         <div class="copy-ri text-center">
             <div id="text-2" class="widget widget_text">
                 <div class="textwidget">
-                    <p>© 2024 Afghan Fruits. All Rights Reserved.<a
-                            href="shafinasib-traders.com" target="_blank" rel="noopener"> <font color="black"> <b> Shafi Nasib - Traders </b></font></a><!--1de5fb80--></p>
+                    <p>© 2024 Afghan Fruits. All Rights Reserved.<a href="shafinasib-traders.com" target="_blank"
+                            rel="noopener">
+                            <font color="black"> <b> Shafi Nasib - Traders </b></font>
+                        </a><!--1de5fb80--></p>
                 </div>
             </div>
 
@@ -1073,7 +782,7 @@
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
-       
+
     </script>
 
     <script type="text/javascript"
@@ -1117,7 +826,6 @@
         twentyfifteen-script-js'></script>
     <script type='text/javascript' src='http://digitalworldafg.com/wp-includes/js/wp-embed.min.js?ver=5.8.10'
         defer ' id=' wp-embed-js'></script>
-
 </body>
 
 </html>

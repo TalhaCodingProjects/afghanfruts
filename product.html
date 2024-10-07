@@ -7,15 +7,18 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!--PAGE TITLE-->
-    <title>Produc - Demo</title>
+    <title>Product - Demo</title>
     <!--PAGE TITLE-->
     <script defer src="https://digitalworldafg.com/wp-content/themes/Digitalworld/js/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- custome js -->
-    <script defer src="https://digitalworldafg.com/wp-content/cache/autoptimize/js/autoptimize_single_63ecebd25d3d9ac4768694c8b9bc4e7d.js"></script>
+    <script defer
+        src="https://digitalworldafg.com/wp-content/cache/autoptimize/js/autoptimize_single_63ecebd25d3d9ac4768694c8b9bc4e7d.js"></script>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -36,9 +39,6 @@
         href="https://digitalworldafg.com/wp-content/themes/Digitalworld/css/font-awesome.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" type="text/css" href="https://digitalworldafg.com/wp-content/themes/Digitalworld/style.css">
-
-    <link rel="icon" href="https://digitalworldafg.com/wp-content/themes/Digitalworld/images/fav.png" type="image/gif"
-        sizes="16x16">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
         rel="stylesheet">
@@ -101,17 +101,163 @@
             display: grid;
             position: relative;
         }
+
+        #head {
+            background-color: orange;
+        }
+
+        #lisbg {
+            background-color: orange;
+        }
+
         /* ... مزید اسٹائل ... */
+        .navbar-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1031;
+            transition: all 0.3s ease;
+        }
+
+        .copy-ri {
+            background-color: orange;
+        }
+
+        footer {
+            background-color: black;
+            /* مکمل سیاہ پس منظر */
+            background: url('https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-backdrop_53876-129485.jpg');
+            color: white;
+            /* سفید رنگ کی تحریر */
+        }
+
+        .footercontent h3.widget-title {
+            color: white;
+            /* عنوان کا رنگ سفید */
+        }
+
+        .footercontent input,
+        .footercontent textarea {
+            background-color: black;
+            /* ان پٹ باکس کا پس منظر بھی سیاہ */
+            color: white;
+            /* ان پٹ باکس کا متن سفید */
+            border: 1px solid white;
+            /* سفید سرحد */
+        }
+
+        .footercontent input::placeholder,
+        .footercontent textarea::placeholder {
+            color: white;
+            /* جگہ دار تحریر کا رنگ سفید */
+        }
+
+        .navbar-toggle .toggle-icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-toggle.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: -280px;
+            width: 240px;
+            height: 100vh;
+            background-color: #f8f9fa;
+            transition: right 0.3s ease;
+            z-index: 1030;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar.show {
+            right: 0;
+        }
+
+        .navbar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            background-color: #000;
+        }
+
+        /* Navbar Brand */
+        .navbar-brand {
+            margin-bottom: 50px;
+        }
+
+        /* Navbar Links (Aligned Left in the Navbar) */
+        .nav-link {
+            color: #333;
+            font-weight: bold;
+            text-align: left;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+        /* Align All Navbar Items Left */
+
+        /* Product Section */
+        .navbar-bottom {
+            margin-top: 20%;
+        }
+
+        .navbar-bottom h5 {
+            color: rgba(0, 0, 0, 0.7);
+            font-weight: 600;
+        }
+
+        .product-link {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 2px solid #007bff;
+            transition: color 0.3s ease;
+        }
+
+        .product-link:hover {
+            color: #007bff;
+        }
+
+        /* Left-align List Items inside the Navbar */
+
+
+        @media (max-width: 768px) {
+            .navbar {
+                width: 100%;
+                right: -100%;
+            }
+        }
     </style>
-    <script type='text/javascript' src='https://digitalworldafg.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' defer ' id=' jquery-core-js'></script>
-    <script type='text/javascript' src='https://digitalworldafg.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' defer ' id=' jquery-migrate-js'></script>
+    <script type='text/javascript' src='https://digitalworldafg.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0'
+        defer ' id=' jquery-core-js'></script>
+    <script type='text/javascript'
+        src='https://digitalworldafg.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' defer ' id='
+        jquery-migrate-js'></script>
 </head>
 
 <body>
 
 
     <header>
-        <div class="header-top">
+        <div id="head" class="header-top">
             <div class="container">
                 <div class="row">
 
@@ -119,8 +265,7 @@
                         <div class="mailandphone">
 
                             <ul>
-                                <li><span><img width="13" height="10"
-                                            src="https
+                                <li><span><img width="13" height="10" src="https
                                             ://digitalworldafg.com/wp-content/themes/Digitalworld/images/phone.png"
                                             alt=""></span><a href="#">+9378788786490</a></li>
 
@@ -134,43 +279,35 @@
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <div class="relanav">
-                <div class="logoarea">
+    <!-- Toggle Button for Navbar -->
+    <div class="navbar-toggle" id="navbarToggle">
+        <div class="toggle-icon">&#9776;</div> <!-- Hamburger icon -->
+    </div>
 
-                    <div class="logo">
+    <!-- Side Navbar -->
+    <nav class="navbar navbar-expand-lg" id="sideNavbar">
+        <div class="container-lg flex-column">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img width="80px" style="border-radius: 8px;" src="/Screenshot 2024-10-06 134937.png" alt="Logo">
+            </a>
 
-                        <a href="https://digitalworldafg.com/"><img width="229" height="155"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThIZnDS3RuqeBNAdfqCNpvCuaLs-TXKCNMpw&s"
-                                alt="Your Logo Will Here" /></a>
+            <!-- Nav Links -->
+            <ul class="navbar-nav flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/product.html">Products</a>
+                </li>
+            </ul>
 
-                    </div>
-
-                </div>
-
-
-                <div class="mobiletab"><i class="fa fa-bars" aria-hidden="true"></i></div>
-                <div class="customemenu">
-
-                    <ul>
-                        <li id="menu-item-25"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-25">
-                            <a href="https://talhacodingprojects.github.io/afghanfruts/index" aria-current="page">Home</a>
-                        </li>
-                        <li id="menu-item-24"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a
-                                href="https://talhacodingprojects.github.io/afghanfruts/about">About Us</a></li>
-
-                        <li id="menu-item-51"
-                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-51"><a
-                                href="https://talhacodingprojects.github.io/afghanfruts/product">Products</a></li>
-                        <li id="menu-item-20"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a
-                                href="https://talhacodingprojects.github.io/afghanfruts/contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
 
         </div>
     </nav>
@@ -202,189 +339,275 @@
 
 
 
-
-
-
-
-
     <section class="prod-inner">
-
         <div class="container">
             <div class="row">
-
                 <div class="text-center">
                     <h2 class="heading text-uppercase">Products</h2>
                 </div>
 
                 <div class="text-center normalpara">
-
                     <p>Premium dry fruits offering quality, freshness, and exceptional taste.</p>
-
                 </div>
 
                 <div class="mainproduct clearfix">
+                    <!-- Fruits Section -->
+                    <div class="col-lg-12">
+                        <h3 class="text-uppercase">Fruits</h3>
+                    </div>
 
-
-
-
-
-                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-
-                        <div class="row">
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="secdet clearfix">
-
                                 <div class="col-md-5">
-
                                     <div class="productimage">
-
                                         <img class="fullimage"
                                             src="https://cdn.britannica.com/04/194904-004-2F20FEBF/Raw-Food-Almond-food-Nut-Snack.jpg"
-                                            alt="" />
-
+                                            alt="Almond" />
                                     </div>
-
                                 </div>
-
                                 <div class="col-md-7">
                                     <div class="deti-text">
-
                                         <h2>Almond</h2>
-
-                                        <p>
-                                        <p>Afghan almonds are renowned for their sweet and delicate taste. They have a
-                                            distinct crunch and are commonly used in both savory and sweet dishes. Rich
-                                            in healthy fats, fiber, magnesium, and Vitamin E, almonds promote heart
-                                            health and improve brain function.</p>
-                                        </p>
-
+                                        <p>Afghan almonds are renowned for their sweet and delicate taste, rich in
+                                            healthy fats, fiber, and Vitamin E.</p>
                                     </div>
-
                                 </div>
                             </div>
+                        </div>
 
-
-
+                        <div class="col-md-6">
                             <div class="secdet clearfix">
-
                                 <div class="col-md-5">
-
                                     <div class="productimage">
-
                                         <img class="fullimage"
                                             src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/01/pistachio-nut-1296x728-header-1296x728.jpg?w=1155&h=1528"
-                                            alt="" />
-
+                                            alt="Pistachios" />
                                     </div>
-
                                 </div>
-
                                 <div class="col-md-7">
                                     <div class="deti-text">
-
                                         <h2>Pistachios</h2>
-
-                                        <p>
-                                        <p>Afghan pistachios are smaller but pack a unique and rich flavor. They are a
-                                            great source of protein, fiber, and healthy fats, making them a nutritious
-                                            snack. Pistachios are used in traditional Afghan sweets, adding a delightful
-                                            crunch and a burst of flavor.</p>
-                                        </p>
-
+                                        <p>Afghan pistachios are smaller but pack a unique and rich flavor, making them
+                                            a nutritious snack.</p>
                                     </div>
-
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="secdet clearfix">
-
                                 <div class="col-md-5">
-
                                     <div class="productimage">
-
                                         <img class="fullimage"
                                             src="https://cdn.britannica.com/57/131157-050-34C34151/raisins.jpg"
-                                            alt="" />
-
+                                            alt="Raisins" />
                                     </div>
-
                                 </div>
-
                                 <div class="col-md-7">
                                     <div class="deti-text">
-
                                         <h2>Raisins</h2>
-
-                                        <p>
-                                        <p>Afghan raisins are a top choice for their exceptional sweetness and quality.
-                                            Sun-dried from the finest grapes, they come in various types like golden,
-                                            green, and black. Rich in natural sugars, fiber, and iron, these raisins
-                                            provide a nutritious boost and a burst of flavor. Perfect for snacking,
-                                            baking, and enhancing a variety of dishes.
-                                        </p>
-
-
-
+                                        <p>Afghan raisins are sun-dried from the finest grapes, rich in natural sugars,
+                                            fiber, and iron.</p>
                                     </div>
-
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="col-md-6">
                             <div class="secdet clearfix">
-
                                 <div class="col-md-5">
-
                                     <div class="productimage">
-
                                         <img class="fullimage"
-                                            src="https://digitalworldafg.com/wp-content/uploads/2018/12/NS700-NC500.png"
-                                            alt="" />
-
+                                            src="https://www.allrecipes.com/thmb/BYmRC_Nnqx2fCwYUixyKgpR40w4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-are-pine-nuts-GettyImages-1800734150-4x3-e1d10f4a5fe140cab3855dc75ffc6d9d.jpg"
+                                            alt="Pine Nuts" />
                                     </div>
-
                                 </div>
-
                                 <div class="col-md-7">
                                     <div class="deti-text">
-
-                                        <h2>Figs</h2>
-
-                                        <p>
-                                            <p>Afghan figs are prized for their naturally sweet and chewy texture. Grown in
-                                                ideal conditions, these figs are rich in fiber, antioxidants, and essential
-                                                minerals like calcium and potassium, promoting digestive health and overall
-                                                wellness. Their unique flavor enhances both savory and sweet dishes, making
-                                                them a versatile ingredient. Whether enjoyed fresh or dried, Afghan figs
-                                                offer a delicious and nutritious boost to your diet.
-
-                                            </p>
-                                        </p>
-
-                                       
-
+                                        <h2>Pine Nuts</h2>
+                                        <p>Afghanistan’s pine nuts are celebrated for their rich flavor and high
+                                            nutritional content.</p>
                                     </div>
-
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="secdet clearfix">
+                                <div class="col-md-5">
+                                    <div class="productimage">
+                                        <img class="fullimage"
+                                            src="https://www.allrecipes.com/thmb/fADe_pBYPb6AOLXztzFjr3HCMmQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-store-figs-4x3-f69cf539c33d484dbb555914e4578407.jpg"
+                                            alt="Figs" />
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="deti-text">
+                                        <h2>Figs</h2>
+                                        <p>Afghan figs are prized for their sweet and chewy texture, rich in fiber and
+                                            essential minerals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="col-md-6">
+                            <div class="secdet clearfix">
+                                <div class="col-md-5">
+                                    <div class="productimage">
+                                        <img class="fullimage"
+                                            src="https://assets.clevelandclinic.org/transform/58808ea2-b314-4e44-93ac-63960e871830/Jujube-Fruit-Dried-1409706855-770x533-1_jpg"
+                                            alt="Jujube" />
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="deti-text">
+                                        <h2>Jujube</h2>
+                                        <p>Afghanistan's jujube is valued for its sweet taste and health benefits,
+                                            thriving in arid climates.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Masala Section -->
+                    <div class="col-lg-12">
+                        <h3 class="text-uppercase">Masala</h3>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="secdet clearfix">
+                                <div class="col-md-5">
+                                    <div class="productimage">
+                                        <img class="fullimage"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS97EOl_wlBXWxLu7sMis10-xq6az3PaoITNA&s"
+                                            alt="Cumin" />
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="deti-text">
+                                        <h2>Cumin</h2>
+                                        <p>Afghanistan's cumin is renowned for its robust flavor, essential in
+                                            traditional Afghan dishes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="col-md-6">
+                            <div class="secdet clearfix">
+                                <div class="col-md-5">
+                                    <div class="productimage">
+                                        <img class="fullimage"
+                                            src="https://www.marthastewart.com/thmb/w1f38EKcAYkVTe2JjqIccB7qOeY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ms-how-to-grow-basil-69c2254cf454424fbc55992cc8155dbe.jpg"
+                                            alt="Basil" />
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="deti-text">
+                                        <h2>Basil</h2>
+                                        <p>Basil is a fragrant herb used in many culinary dishes, especially in Italian
+                                            cuisine.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Hidden Products Start Here -->
+                    <div class="row" id="more-products" style="display: none;">
+                        <div class="col-md-6">
+                            <div class="secdet clearfix">
+                                <div class="col-md-5">
+                                    <div class="productimage">
+                                        <img class="fullimage"
+                                            src="https://media.post.rvohealth.io/wp-content/uploads/2020/11/saffron-732x549-thumbnail-732x549.jpg"
+                                            alt="Saffron" />
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="deti-text">
+                                        <h2>Saffron</h2>
+                                        <p>Afghan saffron is known for its premium quality, a highly valued spice
+                                            derived from the Crocus sativus flower.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="col-md-6">
+                            <div class="secdet clearfix">
+                                <div class="col-md-5">
+                                    <div class="productimage">
+                                        <img class="fullimage"
+                                            src="https://domf5oio6qrcr.cloudfront.net/medialibrary/15065/87d5e4f7-85b4-4055-b40e-eec30b6c7aeb.jpg"
+                                            alt="Turmeric" />
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="deti-text">
+                                        <h2>Turmeric</h2>
+                                        <p>Turmeric from Afghanistan offers an earthy flavor with numerous health
+                                            benefits, commonly used in traditional cooking.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="secdet clearfix">
+                                <div class="col-md-5">
+                                    <div class="productimage">
+                                        <img class="fullimage"
+                                            src="https://d9z1tpn605xsl.cloudfront.net/uploads/ckeditor/pictures/5010/content_img.jpg"
+                                            alt="Agricultural Machine" />
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="deti-text">
+                                        <h2>Agricultural Machine</h2>
+                                        <p>Agricultural machines in Afghanistan play a crucial role in enhancing productivity and efficiency in farming. These machines, including tractors, harvesters, and plows, help farmers cultivate land, sow seeds, and harvest crops.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-6">
+                            <div class="secdet clearfix">
+                                <div class="col-md-5">
+                                    <div class="productimage">
+                                        <img class="fullimage"
+                                            src="https://www.normans.co.uk/cdn/shop/articles/musical_instruments_mix_2_800x.jpg?v=1663668970"
+                                            alt="Instruments" />
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="deti-text">
+                                        <h2>Instruments</h2>
+                                        <p>Instruments are essential tools used across various fields, including music, science, and medicine. They facilitate tasks such as measurement, diagnosis, and performance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- See More Button -->
+                    <div class="text-center">
+                        <button id="see-more" class="btn btn-primary">See More</button>
+                    </div>
                 </div>
             </div>
         </div>
-
-
     </section>
-
-
-
-
-
-
 
 
     <footer>
@@ -402,7 +625,7 @@
                                 <div class="screen-reader-response"></div>
                                 <form action="/#wpcf7-f71-o1" method="post" class="wpcf7-form" novalidate="novalidate">
                                     <div style="display: none;">
-                                        <input type="hidden" name="_wpcf7" value="71" />
+                                        <input id="colorbg" type="hidden" name="_wpcf7" value="71" />
                                         <input type="hidden" name="_wpcf7_version" value="5.1.3" />
                                         <input type="hidden" name="_wpcf7_locale" value="en_US" />
                                         <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f71-o1" />
@@ -411,8 +634,8 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group"> <span
-                                                    class="wpcf7-form-control-wrap FirstName"><input type="text"
-                                                        name="FirstName" value="" size="40"
+                                                    class="wpcf7-form-control-wrap FirstName"><input id="colorbg"
+                                                        type="text" name="FirstName" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="First Name" /></span> </div>
@@ -420,8 +643,8 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group"> <span
-                                                    class="wpcf7-form-control-wrap LastName"><input type="text"
-                                                        name="LastName" value="" size="40"
+                                                    class="wpcf7-form-control-wrap LastName"><input id="colorbg"
+                                                        type="text" name="LastName" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="Last Name" /></span> </div>
@@ -429,16 +652,16 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group"> <span
-                                                    class="wpcf7-form-control-wrap CompanyName"><input type="text"
-                                                        name="CompanyName" value="" size="40"
+                                                    class="wpcf7-form-control-wrap CompanyName"><input id="colorbg"
+                                                        type="text" name="CompanyName" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text form-control"
                                                         aria-invalid="false" placeholder="Company Name" /></span> </div>
                                             </p>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group"> <span
-                                                    class="wpcf7-form-control-wrap PhoneNumber"><input type="tel"
-                                                        name="PhoneNumber" value="" size="40"
+                                                    class="wpcf7-form-control-wrap PhoneNumber"><input id="colorbg"
+                                                        type="tel" name="PhoneNumber" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="Phone Number" /></span> </div>
@@ -446,7 +669,7 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group"> <span class="wpcf7-form-control-wrap Email"><input
-                                                        type="email" name="Email" value="" size="40"
+                                                        id="colorbg" type="email" name="Email" value="" size="40"
                                                         class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="Email" /></span> </div>
@@ -454,8 +677,8 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group"> <span
-                                                    class="wpcf7-form-control-wrap message"><textarea name="message"
-                                                        cols="3" rows="3"
+                                                    class="wpcf7-form-control-wrap message"><textarea id="colorbg"
+                                                        name="message" cols="3" rows="3"
                                                         class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="Message"></textarea></span> </div>
@@ -554,9 +777,10 @@
         <div class="copy-ri text-center">
             <div id="text-2" class="widget widget_text">
                 <div class="textwidget">
-                    <p>© Custome 2008- 2018 All Rights Reserved. Designed &#038; Developed by<a
-                            href="https://www.talhaacademy.online" target="_blank" rel="noopener"> Talha
-                            Academy</a><!--1de5fb80--></p>
+                    <p>© 2024 Afghan Fruits. All Rights Reserved.<a href="shafinasib-traders.com" target="_blank"
+                            rel="noopener">
+                            <font color="black"> <b> Shafi Nasib - Traders </b></font>
+                        </a><!--1de5fb80--></p>
                 </div>
             </div>
 
@@ -587,7 +811,24 @@
 
     <!-- js -->
 
+    <script>
+        document.getElementById('navbarToggle').addEventListener('click', function () {
+            document.getElementById('sideNavbar').classList.toggle('show');
+            this.classList.toggle('active');
+            this.querySelector('.toggle-icon').textContent = this.classList.contains('active') ? '>' : '<';
+        });
+        document.getElementById("see-more").addEventListener("click", function () {
+            var moreProducts = document.getElementById("more-products");
+            if (moreProducts.style.display === "none") {
+                moreProducts.style.display = "block";
+                this.textContent = "Show Less";
+            } else {
+                moreProducts.style.display = "none";
+                this.textContent = "See More";
+            }
+        });
 
+    </script>
 
     <!-- Bootstrap js -->
     <script defer src="https://digitalworldafg.com/wp-content/themes/Digitalworld/js/bootstrap.min.js"></script>
@@ -596,7 +837,9 @@
     <script defer
         src="https://digitalworldafg.com/wp-content/cache/autoptimize/js/autoptimize_single_ccdf893e7d8b26933af0c336bcc3943e.js"></script>
     <!-- EaseScroll js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
     <script defer
         src="https://digitalworldafg.com/wp-content/cache/autoptimize/js/autoptimize_single_a580bb2aec844e2ca48895f484af3d6d.js"></script>
 
